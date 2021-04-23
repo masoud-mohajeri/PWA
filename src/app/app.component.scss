@@ -1,0 +1,33 @@
+@import "../../node_modules//@angular//material/theming";
+
+mat-drawer-container {
+  // width: 500px;
+  height: 100vh;
+}
+
+mat-drawer {
+  width: 250px;
+}
+
+.example-sidenav {
+  padding: 20px;
+}
+mat-toolbar {
+  direction: rtl;
+}
+
+mat-selection-list {
+  direction: rtl;
+  mat-icon {
+    margin-left: -10px;
+    margin-bottom: 5px;
+  }
+}
+mat-list-item {
+  cursor: pointer;
+}
+footer {
+  width: 100%;
+  height: 300px;
+  background-color: map-get($mat-purple, 700);
+}

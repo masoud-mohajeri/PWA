@@ -1,0 +1,41 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="dbForm">
+  <mat-form-field>
+    <mat-label>DataBase Type</mat-label>
+
+    <mat-select formControlName="dbType">
+      <mat-option value="ls">Local Storage</mat-option>
+      <mat-option value="idb">IndexedDB</mat-option>
+      <mat-option value="loki">Loki</mat-option>
+      <mat-option value="dexie">Dexie</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Number Of Querys</mat-label>
+
+    <mat-select formControlName="numberOfQuerys">
+      <mat-option value="1000">1000</mat-option>
+      <mat-option value="10000">10000</mat-option>
+      <mat-option value="100000">100000</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Environment</mat-label>
+    <mat-select formControlName="environment">
+      <mat-option value="normal">Normal</mat-option>
+      <mat-option value="webWorker">Web worker</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button
+    [disabled]="dbForm.invalid || inserting"
+    mat-raised-button
+    color="accent"
+    type="submit"
+  >
+    submit
+  </button>
+  <button mat-raised-button color="accent" type="button" (click)="onClear()">
+    clear
+  </button>
+</form>

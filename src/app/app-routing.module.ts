@@ -1,10 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutMePageComponent } from './about-me-page/about-me-page.component';
+import { CachePageComponent } from './cache-page/cache-page.component';
+import { DatabasePageComponent } from './database-page/database-page.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { NativeApisPageComponent } from './native-apis-page/native-apis-page.component';
+import { NotificationPageComponent } from './notification-page/notification-page.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', component: HomePageComponent },
+  { path: 'database', component: DatabasePageComponent },
+  { path: 'notification', component: NotificationPageComponent },
+  { path: 'cache', component: CachePageComponent },
+  { path: 'about-me', component: AboutMePageComponent },
+  { path: 'native-features', component: NativeApisPageComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
