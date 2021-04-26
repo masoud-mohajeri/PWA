@@ -10,16 +10,16 @@ interface Friend {
   age?: number;
 }
 addEventListener('message', ({ data }) => {
-  console.log('web Worker says hi');
+  // console.log('web Worker says hi');
   let response;
   if (data.action === 'write') {
     transaction(data.payload)
       .then((ltc) => {
-        console.log('write', data);
+        // console.log('write', data);
         postMessage({ response: ltc, status: true });
       })
       .catch((err) => {
-        console.log('Error while insert Queries : ', err);
+        // console.log('Error while insert Queries : ', err);
         postMessage({ response: err, status: false });
       });
   } else {

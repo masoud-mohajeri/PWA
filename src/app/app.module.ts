@@ -1,10 +1,13 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ServiceWorkerModule } from '@angular/service-worker';
+import {
+  ServiceWorkerModule,
+  SwRegistrationOptions,
+} from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { DatabasePageComponent } from './database-page/database-page.component';
 import { NotificationPageComponent } from './notification-page/notification-page.component';
@@ -16,7 +19,11 @@ import { AngularMaterialModule } from './angular-material/angular-material.modul
 import { AnimationComponent } from './database-page/animation/animation.component';
 import { DatabaseFormComponent } from './database-page/database-form/database-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { InstallPageComponent } from './install-page/install-page.component';
+import { NotificationComponent } from './notification-page/notification/notification.component';
+//
 
+//
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +35,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AboutMePageComponent,
     AnimationComponent,
     DatabaseFormComponent,
+    InstallPageComponent,
+    NotificationComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,14 +44,17 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
-      // Register the ServiceWorker as soon as the app is stable
-      // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000',
     }),
     AngularMaterialModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [
+    // {
+    //   provide: SwRegistrationOptions,
+    //   useFactory: () => ({ enabled: location.search.includes('sw=true') }),
+    // },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -10,6 +10,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatInputModule } from '@angular/material/input';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [],
@@ -24,6 +27,9 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatFormFieldModule,
     MatSelectModule,
     MatProgressSpinnerModule,
+    MatTabsModule,
+    MatInputModule,
+    MatCheckboxModule,
   ],
   exports: [
     MatToolbarModule,
@@ -35,6 +41,9 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatFormFieldModule,
     MatSelectModule,
     MatProgressSpinnerModule,
+    MatTabsModule,
+    MatInputModule,
+    MatCheckboxModule,
   ],
 })
 export class AngularMaterialModule {}

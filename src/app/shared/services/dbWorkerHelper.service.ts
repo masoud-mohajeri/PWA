@@ -36,7 +36,7 @@ export class DbHelperService {
         },
       });
       this.worker.onmessage = (message) => {
-        console.log(message);
+        // console.log(message);
         if (typeof message.data.status) {
           resolve(message.data.response);
         } else {
@@ -97,13 +97,13 @@ export class DbHelperService {
   }
 
   deleteIdb() {
-    console.log('in idb cleaner');
+    // console.log('in idb cleaner');
     deleteDB('idb-test')
       .then(() => {
         // console.log('idb');
       })
       .catch((err) => {
-        console.log('error in idb cleaning', err);
+        throw new Error(err);
       });
   }
   // Dexiejs

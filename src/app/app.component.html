@@ -6,7 +6,7 @@
 </mat-toolbar>
 
 <mat-drawer-container autosize>
-  <mat-drawer position="end" #drawer mode="side">
+  <mat-drawer position="end" #drawer mode="push">
     <mat-selection-list [multiple]="false">
       <div mat-subheader>Folders</div>
       <!-- db -->
@@ -27,6 +27,11 @@
       <mat-list-option [routerLink]="['cache']">
         <mat-icon mat-list-icon> manage_accounts </mat-icon>
         <h2>کش</h2>
+      </mat-list-option>
+      <!-- db -->
+      <mat-list-option [routerLink]="['install']">
+        <mat-icon mat-list-icon> manage_accounts </mat-icon>
+        <h2>نصب</h2>
       </mat-list-option>
       <!-- db -->
       <mat-list-option [routerLink]="['native-features']">
