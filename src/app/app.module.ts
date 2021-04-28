@@ -1,4 +1,4 @@
-import { APP_INITIALIZER, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -21,9 +21,7 @@ import { DatabaseFormComponent } from './database-page/database-form/database-fo
 import { ReactiveFormsModule } from '@angular/forms';
 import { InstallPageComponent } from './install-page/install-page.component';
 import { NotificationComponent } from './notification-page/notification/notification.component';
-//
 
-//
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +40,7 @@ import { NotificationComponent } from './notification-page/notification/notifica
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ServiceWorkerModule.register('ngsw-worker.js', {
+    ServiceWorkerModule.register('sw.js', {
       enabled: environment.production,
       registrationStrategy: 'registerWhenStable:30000',
     }),
@@ -50,10 +48,10 @@ import { NotificationComponent } from './notification-page/notification/notifica
     ReactiveFormsModule,
   ],
   providers: [
-    // {
-    //   provide: SwRegistrationOptions,
-    //   useFactory: () => ({ enabled: location.search.includes('sw=true') }),
-    // },
+    {
+      provide: SwRegistrationOptions,
+      useFactory: () => ({ enabled: location.search.includes('sw=true') }),
+    },
   ],
   bootstrap: [AppComponent],
 })

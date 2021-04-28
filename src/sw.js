@@ -1,45 +1,62 @@
-console.log("sw v = 8");
+importScripts("ngsw-worker.js");
+console.log("sw v = 9");
+const syncList = [];
 
 self.addEventListener("install", (event) => {
-  // console.log("install event : ", event);
+  console.log("install event : ", event);
+  // self.skipWaiting();
 });
 
 self.addEventListener("notificationclick", (event) => {
   const notification = event.notification;
   const action = event.action;
   if (action === "git") {
-    notification.close();
     event.waitUntil(
-      clients.matchAll().then((clis) => {
-        const client = clis.find((c) => c.visibilityState === "visible");
-        if (client !== undefined) {
-          console.log("here");
-          client.navigate("https://material.angular.io/");
-          // clients.focus();
-        } else {
-          clients.openWindow("https://material.angular.io/");
-        }
+      clients.matchAll().then(() => {
+        clients.openWindow("https://material.angular.io/");
         notification.close();
       })
     );
   } else if (action === "pwa") {
     event.waitUntil(
-      clients.matchAll().then((clis) => {
-        const client = clis.find((c) => c.visibilityState === "visible");
-        if (client !== undefined) {
-          client.navigate("https://www.google.com/");
-          // client.focus();
-        } else {
-          clients.openWindow("https://www.google.com/");
-        }
+      clients.matchAll().then(() => {
+        clients.openWindow("https://www.google.com/");
         notification.close();
       })
     );
   }
 });
 
-self.addEventListener("beforeinstallprompt", (event) => {
-  event.preventDefault();
-  let promptEvent = event;
-  console.log("[sw] beforeinstallprompt : ", promptEvent);
-});
+// self.addEventListener("message", (event) => {
+//   console.log(event);
+//   if (event.data.type === "syncInput") {
+//     syncList.push(event.data.Input);
+//   }
+// });
+
+// function postData(data) {
+//   fetch("https://masoud-pwa-default-rtdb.firebaseio.com/", {
+//     method: "POST",
+//     mode: "cors",
+//     credentials: "same-origin",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify(data),
+//   })
+//     .then((res) => {
+//       if (res.ok) {
+//         syncList.filter((sd) => sd.date !== data.date);
+//       }
+//     })
+//     .catch((err) => {
+//       console.log("fetch error (turn on your vpn) : ", err);
+//     });
+// }
+
+//data : { [time: string]: Date , [signuture: string]: string }
+
+// self.addEventListener('sync',event=>{
+//   console.log('[sw] background sync : ' , event)
+
+// })

@@ -7,19 +7,16 @@ import { BehaviorSubject } from 'rxjs';
 export class InstallPromptService {
   promptEvent = new BehaviorSubject<any>(null);
 
-  constructor() {
-    // window.addEventListener('beforeinstallprompt', (event: any) => {
-    //   event.preventDefault();
-    //   this.promptEvent = event;
-    //   console.log(this.promptEvent);
-    // });
-  }
+  constructor() {}
 
   promptAction() {
-    // console.log(this.promptEvent);
-    // this.promptEvent.prompt();
     this.promptEvent.subscribe((event: any) => {
-      event.prompt();
+      if (!!event) {
+        event.prompt();
+        console.log(event);
+      } else {
+        console.log('install event is not available');
+      }
     });
   }
 }

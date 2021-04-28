@@ -10,39 +10,45 @@
     <mat-selection-list [multiple]="false">
       <div mat-subheader>Folders</div>
       <!-- db -->
-      <mat-list-option [routerLink]="['']">
-        <mat-icon mat-list-icon> manage_accounts </mat-icon>
+      <mat-list-option (click)="drawer.toggle()" [routerLink]="['']">
+        <mat-icon mat-list-icon> home </mat-icon>
         <h2>خانه</h2>
       </mat-list-option>
-      <mat-list-option [routerLink]="['database']">
-        <mat-icon mat-list-icon> manage_accounts </mat-icon>
+      <mat-list-option (click)="drawer.toggle()" [routerLink]="['database']">
+        <mat-icon mat-list-icon> sd_storage </mat-icon>
         <h2>دیتا بیس</h2>
       </mat-list-option>
       <!-- db -->
-      <mat-list-option [routerLink]="['notification']">
-        <mat-icon mat-list-icon> manage_accounts </mat-icon>
+      <mat-list-option
+        (click)="drawer.toggle()"
+        [routerLink]="['notification']"
+      >
+        <mat-icon mat-list-icon> notifications_active </mat-icon>
         <h2>نوتیفیکیشن</h2>
       </mat-list-option>
       <!-- db -->
-      <mat-list-option [routerLink]="['cache']">
-        <mat-icon mat-list-icon> manage_accounts </mat-icon>
+      <mat-list-option (click)="drawer.toggle()" [routerLink]="['cache']">
+        <mat-icon mat-list-icon> cached </mat-icon>
         <h2>کش</h2>
       </mat-list-option>
       <!-- db -->
-      <mat-list-option [routerLink]="['install']">
-        <mat-icon mat-list-icon> manage_accounts </mat-icon>
+      <mat-list-option (click)="drawer.toggle()" [routerLink]="['install']">
+        <mat-icon mat-list-icon> system_update </mat-icon>
         <h2>نصب</h2>
       </mat-list-option>
       <!-- db -->
-      <mat-list-option [routerLink]="['native-features']">
-        <mat-icon mat-list-icon> manage_accounts </mat-icon>
+      <mat-list-option
+        (click)="drawer.toggle()"
+        [routerLink]="['native-features']"
+      >
+        <mat-icon mat-list-icon> developer_mode </mat-icon>
         <h2>ویژگی های نیتیو</h2>
       </mat-list-option>
       <mat-divider></mat-divider>
       <div mat-subheader>Notes</div>
       <!--  -->
-      <mat-list-option [routerLink]="['about-me']">
-        <mat-icon mat-list-icon>note</mat-icon>
+      <mat-list-option (click)="drawer.toggle()" [routerLink]="['about-me']">
+        <mat-icon mat-list-icon>code</mat-icon>
         <h2>درباره من</h2>
       </mat-list-option>
     </mat-selection-list>
