@@ -1,22 +1,42 @@
-<mat-toolbar color="primary">
+<mat-toolbar style="width: 100%" color="primary">
   <button (click)="drawer.toggle()" mat-icon-button>
     <mat-icon>menu</mat-icon>
   </button>
-  <span>My App</span>
+  <span>PWA </span>
+  <!-- <button
+    style="position: absolute; left: 20px"
+    mat-button
+    [matMenuTriggerFor]="menu"
+  >
+    <mat-icon>format_color_fill</mat-icon>
+  </button> -->
 </mat-toolbar>
-
+<!--  -->
+<!-- <mat-menu #menu="matMenu">
+  <mat-radio-group [(ngModel)]="theme">
+    <mat-radio-button value="Amber">Deep Purple & Amber</mat-radio-button>
+    <mat-radio-button value="Indigo">Indigo & Pink</mat-radio-button>
+    <mat-radio-button value="Pink">Pink & Blue-grey</mat-radio-button>
+    <mat-radio-button value="Purple">Purple & Green</mat-radio-button>
+  </mat-radio-group>
+</mat-menu> -->
+<!--  -->
 <mat-drawer-container autosize>
-  <mat-drawer position="end" #drawer mode="push">
+  <mat-drawer position="end" #drawer mode="over">
     <mat-selection-list [multiple]="false">
-      <div mat-subheader>Folders</div>
       <!-- db -->
+      <div mat-subheader>PWA App</div>
+
       <mat-list-option (click)="drawer.toggle()" [routerLink]="['']">
         <mat-icon mat-list-icon> home </mat-icon>
         <h2>خانه</h2>
       </mat-list-option>
-      <mat-list-option (click)="drawer.toggle()" [routerLink]="['database']">
-        <mat-icon mat-list-icon> sd_storage </mat-icon>
-        <h2>دیتا بیس</h2>
+      <mat-divider></mat-divider>
+      <div mat-subheader>Features</div>
+
+      <mat-list-option (click)="drawer.toggle()" [routerLink]="['web-worker']">
+        <mat-icon mat-list-icon> room_preferences </mat-icon>
+        <h2>وب ورکر</h2>
       </mat-list-option>
       <!-- db -->
       <mat-list-option
@@ -45,7 +65,7 @@
         <h2>ویژگی های نیتیو</h2>
       </mat-list-option>
       <mat-divider></mat-divider>
-      <div mat-subheader>Notes</div>
+      <div mat-subheader>Contact Us</div>
       <!--  -->
       <mat-list-option (click)="drawer.toggle()" [routerLink]="['about-me']">
         <mat-icon mat-list-icon>code</mat-icon>
@@ -55,6 +75,17 @@
   </mat-drawer>
 
   <router-outlet></router-outlet>
+  <footer style="display: flex; justify-content: center; align-content: center">
+    <a
+      style="cursor: pointer"
+      href="https://github.com/mohajerimasoud"
+      target="_blank"
+    >
+      <img
+        style="width: 100px; height: auto"
+        src="../../assets/images/github.png"
+        alt="my-github"
+      />
+    </a>
+  </footer>
 </mat-drawer-container>
-
-<footer></footer>

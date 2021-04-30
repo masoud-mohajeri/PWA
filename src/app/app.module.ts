@@ -18,7 +18,7 @@ import { AboutMePageComponent } from './about-me-page/about-me-page.component';
 import { AngularMaterialModule } from './angular-material/angular-material.module';
 import { AnimationComponent } from './database-page/animation/animation.component';
 import { DatabaseFormComponent } from './database-page/database-form/database-form.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InstallPageComponent } from './install-page/install-page.component';
 import { NotificationComponent } from './notification-page/notification/notification.component';
 
@@ -46,6 +46,7 @@ import { NotificationComponent } from './notification-page/notification/notifica
     }),
     AngularMaterialModule,
     ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [
     {

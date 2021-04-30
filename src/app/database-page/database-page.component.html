@@ -1,12 +1,48 @@
 <mat-tab-group mat-align-tabs="center">
-  <mat-tab label="First">
+  <mat-tab label="توضیحات ">
+    <div class="body-text">
+      <h1>⚙️وب ورکر چیه ؟</h1>
+      <p>
+        در کل در اگر بخوایم کامل تر حرف بزنیم وب ورکر یکی از 5 نوع ورکری هست که
+        در جا,ا اسکریپت وجود داره :
+      </p>
+      <div>
+        <ul>
+          <li>Service workers</li>
+          <li>Shared workers</li>
+          <li>Web workers</li>
+          <li>Inline Workers</li>
+          <li>Dedicated Workers</li>
+        </ul>
+      </div>
+      <p style="width: 100%">
+        و سوالی که پیش میاد اینه که خود ورکر چیه اصلا ؟!
+      </p>
+      <p>
+        ورکر ها این اجازه رو به ما میدن که خارج از thread اصلی برنامه بتونیم
+        کارایی انجام بدیم. مثلا کاری که اینجا کردیم این بوده که تعداد زیادی داده
+        رو توی دیتا بیس های مختلف ذخیره میکنیم ولی وقتی از thread اصلی استفاده
+        میکنیم میبینیم که DOM بلاک میشه و اون اسپینر بالا حرکتش مختل میشه ولی
+        وقتی شروع به انجام این عملیات توی وب ورکر میکنیم دیگه این مشکل رو نداریم
+        .
+      </p>
+      <p>
+        این یک مثال خیلی خوبه که میتونه عملکرد ورکر ها رو به خوبی نشون بده .
+      </p>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <!-- <div class="fix-db-tot"></div> -->
+  </mat-tab>
+  <mat-tab label="تست کردن ">
     <section class="show-case">
       <section class="animation">
         <app-animation></app-animation>
       </section>
       <app-database-form></app-database-form>
+      <div class="fix-db-tot"></div>
     </section>
   </mat-tab>
-  <mat-tab label="Second">Content 2</mat-tab>
-  <mat-tab label="Third">Content 3</mat-tab>
 </mat-tab-group>

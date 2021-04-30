@@ -10,7 +10,7 @@ import { NotificationPageComponent } from './notification-page/notification-page
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
-  { path: 'database', component: DatabasePageComponent },
+  { path: 'web-worker', component: DatabasePageComponent },
   { path: 'notification', component: NotificationPageComponent },
   { path: 'cache', component: CachePageComponent },
   { path: 'about-me', component: AboutMePageComponent },

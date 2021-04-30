@@ -19,7 +19,7 @@ export class NotificationComponent implements OnInit {
     this.SWNotif = new FormGroup({
       header: new FormControl('Hi There!', Validators.required),
       body: new FormControl('Hi There!', Validators.required),
-      image: new FormControl(false, Validators.required),
+      image: new FormControl(true, Validators.required),
       lang: new FormControl('eng', Validators.required),
       vibration: new FormControl(true, Validators.required),
       badge: new FormControl(true, Validators.required),
@@ -37,7 +37,7 @@ export class NotificationComponent implements OnInit {
   }
   SWNotifSubmit() {
     console.log(this.SWNotif);
-    const imgUrl = '../../../assets/images/snake.png';
+    const imgUrl = '../../../assets/images/pwa_article_1.png';
     Notification.requestPermission((result) => {
       // console.log(result);
       if (result === 'granted') {

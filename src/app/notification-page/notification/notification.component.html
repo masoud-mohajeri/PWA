@@ -1,55 +1,54 @@
 <section class="centerize">
-  <h3>Simple Notification</h3>
-  <form (ngSubmit)="simpleNotifSubmit()" [formGroup]="simpleNotif">
-    <mat-form-field>
-      <mat-label>Text </mat-label>
-      <input formControlName="notifText" matInput />
-    </mat-form-field>
-    <button type="submit" mat-raised-button color="primary">
-      show notififcation
-    </button>
-  </form>
-
-  <h3>Service-Worker Notification</h3>
-  <form (ngSubmit)="SWNotifSubmit()" [formGroup]="SWNotif">
-    <mat-form-field>
-      <mat-label>header </mat-label>
-      <input formControlName="header" matInput />
-      <mat-error *ngIf="SWNotif.controls.header.errors?.required">
-        This field is required
-      </mat-error>
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>body </mat-label>
-      <input formControlName="body" matInput />
-      <mat-error *ngIf="SWNotif.controls.body.errors?.required">
-        This field is required
-      </mat-error>
-    </mat-form-field>
-    <mat-checkbox formControlName="image" [checked]="SWNotif.value.image">
-      Image
-    </mat-checkbox>
-    <mat-checkbox
-      formControlName="vibration"
-      [checked]="SWNotif.value.vibration"
-    >
-      Vibration
-    </mat-checkbox>
-    <mat-checkbox formControlName="badge" [checked]="SWNotif.value.badge">
-      Badge
-    </mat-checkbox>
-    <mat-checkbox formControlName="actions" [checked]="SWNotif.value.actions">
-      Action Button
-    </mat-checkbox>
-    <mat-form-field>
-      <mat-label>Language</mat-label>
-      <mat-select formControlName="lang">
-        <mat-option value="eng"> English </mat-option>
-        <mat-option value="farsi"> Persian </mat-option>
-      </mat-select>
-    </mat-form-field>
-    <button type="submit" mat-raised-button color="primary">
-      show notififcation
-    </button>
-  </form>
+  <section class="form-container">
+    <h3>🔔 Simple Notification</h3>
+    <form (ngSubmit)="simpleNotifSubmit()" [formGroup]="simpleNotif">
+      <mat-form-field>
+        <mat-label>Text </mat-label>
+        <input formControlName="notifText" matInput />
+      </mat-form-field>
+      <button type="submit" mat-mini-fab color="accent">🔔</button>
+    </form>
+  </section>
+  <section class="form-container">
+    <h3>🛎️ Service-Worker Notification</h3>
+    <form (ngSubmit)="SWNotifSubmit()" [formGroup]="SWNotif">
+      <mat-form-field>
+        <mat-label>header </mat-label>
+        <input formControlName="header" matInput />
+        <mat-error *ngIf="SWNotif.controls.header.errors?.required">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>body </mat-label>
+        <input formControlName="body" matInput />
+        <mat-error *ngIf="SWNotif.controls.body.errors?.required">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+      <mat-checkbox formControlName="image" [checked]="SWNotif.value.image">
+        Image
+      </mat-checkbox>
+      <mat-checkbox
+        formControlName="vibration"
+        [checked]="SWNotif.value.vibration"
+      >
+        Vibration
+      </mat-checkbox>
+      <mat-checkbox formControlName="badge" [checked]="SWNotif.value.badge">
+        Badge
+      </mat-checkbox>
+      <mat-checkbox formControlName="actions" [checked]="SWNotif.value.actions">
+        Action Button
+      </mat-checkbox>
+      <mat-form-field>
+        <mat-label>Language</mat-label>
+        <mat-select formControlName="lang">
+          <mat-option value="eng"> English </mat-option>
+          <mat-option value="farsi"> Persian </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button type="submit" mat-mini-fab color="accent">🛎️</button>
+    </form>
+  </section>
 </section>

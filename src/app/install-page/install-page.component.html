@@ -1,9 +1,17 @@
-<mat-tab-group mat-align-tabs="center">
-  <mat-tab label="First">
-    <button (click)="onInstallPrompt()" mat-raised-button color="primary">
-      show notififcation
-    </button>
-  </mat-tab>
-  <mat-tab label="Second">Content 2</mat-tab>
-  <mat-tab label="Third">Content 3</mat-tab>
-</mat-tab-group>
+<div class="body-text">
+  <h1>نصب</h1>
+  <p>
+    برای بازار یابی اپ های نیتیو همیشه یکی از بزرگ ترین مشکلات زمان نسبتا طولانی
+    دانلود و نصب برنامه است و به همین خاطر میانگین نصب برنامه برای کاربران گوشی
+    های هوشمند در یک ماه تقریبا برابر 0 است و خب این که بدون هیچ اتلاف وقتی
+    میتوانیم وب اپلیکیشن مان را نصب کنیم خود یک مزیت بزرگ است .
+  </p>
+  <p>
+    برای نصب باید به beforeinstallprompt در Service Worker گوش دهیم و این Event
+    را در زمان لازم به کمک متد prompt اجرا کنیم .
+  </p>
+  <p>با فشردن دکمه زیر میتوانید برنامه را در گوشی خود نصب کنید !</p>
+  <button (click)="onInstallPrompt()" mat-flat-button color="primary">
+    <mat-icon>auto_fix_high</mat-icon>
+  </button>
+</div>

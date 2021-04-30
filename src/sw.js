@@ -1,10 +1,10 @@
-importScripts("ngsw-worker.js");
+// importScripts("ngsw-worker.js");
 console.log("sw v = 9");
 const syncList = [];
 
 self.addEventListener("install", (event) => {
-  console.log("install event : ", event);
-  // self.skipWaiting();
+  // console.log("install event : ", event);
+  self.skipWaiting();
 });
 
 self.addEventListener("notificationclick", (event) => {

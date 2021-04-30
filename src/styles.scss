@@ -1,11 +1,68 @@
 /* You can add global styles to this file, and also import other style files */
-@import url("https://v1.fontapi.ir/css/Vazir");
-
+// @import url("https://v1.fontapi.ir/css/Vazir");
+@import "../node_modules//@angular//material/theming";
+//
 html,
 body {
-  height: 100%;
+  // height: 100%;
+  margin: 0;
+  padding: 0;
 }
 body {
   margin: 0;
   font-family: Vazir, Roboto, "Helvetica Neue", sans-serif;
+}
+
+.body-text {
+  font-size: medium;
+  // display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  direction: rtl;
+  width: 50%;
+  text-align: justify;
+  margin: auto;
+  font-family: Vazir;
+  padding: 15px;
+  line-height: 160%;
+  font-size: 1rem;
+  min-height: 800px;
+  img {
+    display: block;
+    padding-bottom: 30px;
+    margin: 25px auto;
+    width: 95%;
+  }
+  h1 {
+    font-family: Vazir;
+    margin: 15px 0;
+  }
+  @media (max-width: 1200px) {
+    width: 80%;
+    padding: 0;
+  }
+  @media (max-width: 800px) {
+    font-size: 0.9rem;
+    width: 90%;
+  }
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #424242;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #9c27ce;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
