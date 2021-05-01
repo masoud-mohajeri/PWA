@@ -13,7 +13,7 @@ export class AppComponent {
     window.addEventListener('beforeinstallprompt', (event: any) => {
       event.preventDefault();
       const promptEvent = event;
-      console.log(promptEvent);
+      // console.log(promptEvent);
       this.promptService.promptEvent.next(promptEvent);
     });
   }

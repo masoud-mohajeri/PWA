@@ -29,14 +29,14 @@ export class NotificationComponent implements OnInit {
 
   simpleNotifSubmit() {
     Notification.requestPermission((result) => {
-      console.log(result);
+      // console.log(result);
       if (result === 'granted') {
         new Notification(this.simpleNotif.value.notifText);
       }
     });
   }
   SWNotifSubmit() {
-    console.log(this.SWNotif);
+    // console.log(this.SWNotif);
     const imgUrl = '../../../assets/images/pwa_article_1.png';
     Notification.requestPermission((result) => {
       // console.log(result);

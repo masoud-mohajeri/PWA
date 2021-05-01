@@ -1,5 +1,5 @@
 importScripts("ngsw-worker.js");
-console.log("sw v = 9");
+// console.log("sw v = 9");
 const syncList = [];
 
 self.addEventListener("install", (event) => {
@@ -20,7 +20,7 @@ self.addEventListener("notificationclick", (event) => {
   } else if (action === "pwa") {
     event.waitUntil(
       clients.matchAll().then(() => {
-        clients.openWindow("https://www.google.com/");
+        clients.openWindow("https://masoud-pwa.web.app/");
         notification.close();
       })
     );

@@ -141,7 +141,7 @@
           "builder": "@angular-devkit/build-angular:server",
           "options": {
             "outputPath": "dist/Database-Comparison/server",
-            "main": "src/main.server.ts",
+            "main": "server.ts",
             "tsConfig": "tsconfig.server.json"
           },
           "configurations": {
@@ -170,6 +170,32 @@
               "browserTarget": "Database-Comparison:build:production",
               "serverTarget": "Database-Comparison:server:production"
             }
+          }
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "options": {
+            "browserTarget": "Database-Comparison:build",
+            "serverTarget": "Database-Comparison:server"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "Database-Comparison:build:production",
+              "serverTarget": "Database-Comparison:server:production"
+            }
+          }
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "browserTarget": "Database-Comparison:build:production",
+            "serverTarget": "Database-Comparison:server:production",
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {}
           }
         }
       }
