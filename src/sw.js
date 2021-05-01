@@ -1,4 +1,4 @@
-// importScripts("ngsw-worker.js");
+importScripts("ngsw-worker.js");
 console.log("sw v = 9");
 const syncList = [];
 
@@ -13,7 +13,7 @@ self.addEventListener("notificationclick", (event) => {
   if (action === "git") {
     event.waitUntil(
       clients.matchAll().then(() => {
-        clients.openWindow("https://material.angular.io/");
+        clients.openWindow("https://github.com/mohajerimasoud");
         notification.close();
       })
     );

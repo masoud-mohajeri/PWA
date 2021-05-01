@@ -26,5 +26,22 @@
         ]
       }
     }
+  ],
+  "dataGroups": [
+    {
+      "name": "app-body",
+      "urls": [
+        "/*",
+        "https://v1.fontapi.ir/css/Vazir",
+        "https://fonts.googleapis.com/**",
+        "https://fonts.gstatic.com/**",
+        "https://fdn.fontcdn.ir/Fonts/**"
+      ],
+      "cacheConfig": {
+        "strategy": "performance",
+        "maxAge": "20d",
+        "maxSize": 100
+      }
+    }
   ]
 }

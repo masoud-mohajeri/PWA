@@ -21,6 +21,7 @@ import { DatabaseFormComponent } from './database-page/database-form/database-fo
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InstallPageComponent } from './install-page/install-page.component';
 import { NotificationComponent } from './notification-page/notification/notification.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { NotificationComponent } from './notification-page/notification/notifica
     NotificationComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule,
     ServiceWorkerModule.register('sw.js', {
@@ -47,6 +48,7 @@ import { NotificationComponent } from './notification-page/notification/notifica
     AngularMaterialModule,
     ReactiveFormsModule,
     FormsModule,
+    RouterModule,
   ],
   providers: [
     {

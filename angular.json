@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Database-Comparison",
+            "outputPath": "dist/Database-Comparison/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -119,7 +119,8 @@
               "tsconfig.app.json",
               "tsconfig.spec.json",
               "e2e/tsconfig.json",
-              "tsconfig.worker.json"
+              "tsconfig.worker.json",
+              "tsconfig.server.json"
             ],
             "exclude": ["**/node_modules/**"]
           }
@@ -133,6 +134,41 @@
           "configurations": {
             "production": {
               "devServerTarget": "Database-Comparison:serve:production"
+            }
+          }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/Database-Comparison/server",
+            "main": "src/main.server.ts",
+            "tsConfig": "tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "sourceMap": false,
+              "optimization": true
+            }
+          }
+        },
+        "app-shell": {
+          "builder": "@angular-devkit/build-angular:app-shell",
+          "options": {
+            "browserTarget": "Database-Comparison:build",
+            "serverTarget": "Database-Comparison:server",
+            "route": "shell"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "Database-Comparison:build:production",
+              "serverTarget": "Database-Comparison:server:production"
             }
           }
         }
