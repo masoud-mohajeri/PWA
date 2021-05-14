@@ -1,0 +1,121 @@
+{
+  "configVersion": 1,
+  "timestamp": 1621006881753,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/0.537b27130d1e73607a0c.worker.js",
+        "/favicon.ico",
+        "/index.html",
+        "/main.fa5a6eaeac5e1f0c46d1.js",
+        "/manifest.webmanifest",
+        "/polyfills.94daefd414b8355106ab.js",
+        "/runtime.7b63b9fd40098a2e8207.js",
+        "/styles.6cc2c2195ef001d32575.css",
+        "/sw-register.js",
+        "/sw.js"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/assets/icons/Icon-144.png",
+        "/assets/icons/Icon-192.png",
+        "/assets/icons/Icon-512.png",
+        "/assets/icons/Icon-72.png",
+        "/assets/icons/Icon-96.png",
+        "/assets/icons/computer.png",
+        "/assets/images/angular-cache.png",
+        "/assets/images/cache-reg.png",
+        "/assets/images/github.png",
+        "/assets/images/install.png",
+        "/assets/images/pwa_article_1.png",
+        "/assets/images/simple notification.png",
+        "/assets/images/sw notification.png",
+        "/assets/images/sw-reg.png",
+        "/assets/images/sw2.png",
+        "/assets/images/web-worker.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "app-body",
+      "patterns": [
+        "\\/[^/]*",
+        "https:\\/\\/v1\\.fontapi\\.ir\\/css\\/Vazir",
+        "https:\\/\\/fonts\\.googleapis\\.com\\/.*",
+        "https:\\/\\/fonts\\.gstatic\\.com\\/.*",
+        "https:\\/\\/fdn\\.fontcdn\\.ir\\/Fonts\\/.*"
+      ],
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": 1728000000,
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "version": 1
+    }
+  ],
+  "hashTable": {
+    "/0.537b27130d1e73607a0c.worker.js": "1a7a78cee97a9fb2ce9c2fad4ed4614aaa84d069",
+    "/assets/icons/Icon-144.png": "47aec958127496d0f4ac537909efb4b1eb521557",
+    "/assets/icons/Icon-192.png": "7cf027f19d9a6cfa43fe7eeb7e7169ca48fe73fe",
+    "/assets/icons/Icon-512.png": "73e6e883f87cce96db65cbc59b46aa726b754a7a",
+    "/assets/icons/Icon-72.png": "168169cd27850644f8901d578547058d3c2c4204",
+    "/assets/icons/Icon-96.png": "a94af84a7c06a990fbed953c2270338df1d025ce",
+    "/assets/icons/computer.png": "8cfa6413f22cc1e1da452a32925a3be13cb279c1",
+    "/assets/images/angular-cache.png": "9d7d8abeb5cd5e92ffca25e4ae0cb0ec389e37e5",
+    "/assets/images/cache-reg.png": "29e86c9dc3616b1eab14640b0ad76a1c25ee46be",
+    "/assets/images/github.png": "cc9041b8cb6b2194c10dfe09f3e067f9b8061e35",
+    "/assets/images/install.png": "d4ae504efc7b72180d1c55d850663981a2a748d8",
+    "/assets/images/pwa_article_1.png": "541726462af15ceffb928df65ac11547fb4ac91a",
+    "/assets/images/simple notification.png": "f4cc6100b91f5122a105ccfab8e214ee12e70936",
+    "/assets/images/sw notification.png": "2581ae9b4acc0e764d5fc7917127f8077b2738d5",
+    "/assets/images/sw-reg.png": "1bacb7199e0609527e6a9fa64719939fd900be75",
+    "/assets/images/sw2.png": "e1270319323348c0ab68c0b00b8e31fb5ac3765e",
+    "/assets/images/web-worker.png": "e57363cdb38b632ff69491402315b6d37b821f9f",
+    "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/index.html": "52cbf7c5941306e8867934fd2dec700e62eea664",
+    "/main.fa5a6eaeac5e1f0c46d1.js": "a2a344e7ebab0c65ae9b4e1dfc5e392aa75596e2",
+    "/manifest.webmanifest": "37138782a4b464d6926a2f5a260550c0582eebad",
+    "/polyfills.94daefd414b8355106ab.js": "cfe7b0b53e96bff9ba384b4d497c08475a617d62",
+    "/runtime.7b63b9fd40098a2e8207.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/styles.6cc2c2195ef001d32575.css": "73725455997fa11eaa72907ec06c05eb9c09311f",
+    "/sw-register.js": "01ac6a0507c9540159f5405af217efadbbc2f73a",
+    "/sw.js": "84721ade0f4f20993ac76f80640c2c3a01fbd9d6"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
