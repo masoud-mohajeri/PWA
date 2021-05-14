@@ -22,6 +22,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InstallPageComponent } from './install-page/install-page.component';
 import { NotificationComponent } from './notification-page/notification/notification.component';
 import { RouterModule } from '@angular/router';
+import { RegisterSwComponent } from './register-sw/register-sw.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { RouterModule } from '@angular/router';
     DatabaseFormComponent,
     InstallPageComponent,
     NotificationComponent,
+    RegisterSwComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

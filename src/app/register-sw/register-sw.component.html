@@ -1,0 +1,38 @@
+<div class="body-text">
+  <h1>ثبت یک Service Worker در Angular</h1>
+
+  <p>برای این کار مراحل زیر را دنبال میکنیم :</p>
+
+  <ol>
+    <li>
+      <p>ابتدا 2 فایل با نام ها sw-rwg.js و sw.js میسازیم</p>
+    </li>
+    <li>
+      <p>هر دو فایل را در index.html در تگ script وارد میکنیم</p>
+    </li>
+    <li>
+      <p>در فایل sw-reg.js به کمک کد زیر sw.js را معرفی میکنیم</p>
+    </li>
+    <img src="../../assets/images/sw-reg.png" alt="" />
+    <li>
+      <p>به کمک دستورات زیر قابلیت سرویس ورکر را در انگولار فعال میکنیم :</p>
+      <ul>
+        <li>ng add @angular/pwa --project *project-name*</li>
+        <li>npm i @angular/service-worker</li>
+      </ul>
+    </li>
+    <li>
+      <p>
+        در فایل app.module.ts فایل sw.js را جایگزین میکنیم ( مانند شکل زیر )
+      </p>
+      <img src="../../assets/images/sw2.png" alt="" />
+    </li>
+    <li>
+      <p>
+        و در آخر برای این که قابلیت های PWA خود انگولار را داشته باشیم در ابتدای
+        فایل sw.js این ایمپورت را مینویسیم
+      </p>
+      <p>importScripts("ngsw-worker.js");</p>
+    </li>
+  </ol>
+</div>

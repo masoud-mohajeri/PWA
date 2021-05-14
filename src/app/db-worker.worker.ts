@@ -11,7 +11,6 @@ interface Friend {
 }
 addEventListener('message', ({ data }) => {
   // console.log('web Worker says hi');
-  let response;
   if (data.action === 'write') {
     transaction(data.payload)
       .then((ltc) => {
@@ -23,7 +22,6 @@ addEventListener('message', ({ data }) => {
         postMessage({ response: err, status: false });
       });
   } else {
-    response = 'Error in input';
     postMessage({ response: 'Error in input', status: false });
   }
 });

@@ -7,6 +7,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { InstallPageComponent } from './install-page/install-page.component';
 import { NativeApisPageComponent } from './native-apis-page/native-apis-page.component';
 import { NotificationPageComponent } from './notification-page/notification-page.component';
+import { RegisterSwComponent } from './register-sw/register-sw.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -16,12 +17,15 @@ const routes: Routes = [
   { path: 'about-me', component: AboutMePageComponent },
   { path: 'native-features', component: NativeApisPageComponent },
   { path: 'install', component: InstallPageComponent },
+  { path: 'angular', component: RegisterSwComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    initialNavigation: 'enabled'
-})],
+  imports: [
+    RouterModule.forRoot(routes, {
+      initialNavigation: 'enabled',
+    }),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

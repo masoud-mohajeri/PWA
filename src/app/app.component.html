@@ -64,6 +64,10 @@
         <mat-icon mat-list-icon> developer_mode </mat-icon>
         <h2>ویژگی های نیتیو</h2>
       </mat-list-option>
+      <mat-list-option (click)="drawer.toggle()" [routerLink]="['angular']">
+        <mat-icon mat-list-icon> settings_suggest </mat-icon>
+        <h2>Angular</h2>
+      </mat-list-option>
       <mat-divider></mat-divider>
       <div mat-subheader>Contact Us</div>
       <!--  -->

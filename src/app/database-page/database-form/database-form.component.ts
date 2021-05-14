@@ -19,7 +19,7 @@ export class DatabaseFormComponent implements OnInit {
   ngOnInit(): void {
     this.dbForm = new FormGroup(
       {
-        dbType: new FormControl('ls', Validators.required),
+        dbType: new FormControl('idb', Validators.required),
         numberOfQuerys: new FormControl('1000', Validators.required),
         environment: new FormControl('normal', Validators.required),
       },
